@@ -1,0 +1,128 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: #c4d5da;
+    color: rgb(0, 0, 0);
+  }
+
+  input {
+    padding: 12px;
+    margin: 12px 0;
+    font-family: 'Inter', sans-serif;
+    background-color: white;
+    color: rgb(0, 0, 0);
+    border: 1px solid #4fb3bf;
+    border-radius: 4px;
+  }
+  
+  input::placeholder {
+    color: #aaa;
+    font-weight: bold;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 16px;
+    border-bottom: 1px solid #aaa;
+    background-color: #00838f;
+  }
+  
+  .header h1 {
+    margin: 8px 0;
+    flex: 1;
+    color: white;
+  }
+  
+  .app__body {
+    max-width: 1000px;
+    margin: auto;
+    padding: 1rem;
+  }
+  
+  .app__body h2 {
+    font-weight: normal;
+    margin: 16px 0;
+  }
+
+  .note-tb {
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+  .note-mt {
+    margin-top: 10px;
+  }
+  
+  .app_list {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(min-content, max-content);
+    gap: 16px;
+    margin-bottom: 48px;
+  }
+  
+  .list__empty-message {
+    text-align: center;
+    color: #aaa;
+  }
+  
+  .app_item {
+    border: 1px;
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+  }
+  
+  .item__content {
+    padding: 12px;
+    flex: 1;
+  }
+  
+  .item__title {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-bottom: 4px;
+  }
+  
+  .item__date {
+    font-size: 12px;
+    margin-bottom: 8px;
+    color: rgb(100, 2, 2);
+  }
+  
+  .item__body {
+    font-size: 14px;
+  }
+  
+  @media only screen and (min-width: 500px) {
+    .notes-list {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  @media only screen and (min-width: 800px) {
+    .notes-list {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  
+    .search input {
+      min-width: 400px;
+    }
+  }
+  
+  @media only screen and (min-width: 800px) {
+    .notes-list {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
